@@ -1,0 +1,642 @@
+[
+    {
+       "title": "Installing CF CLI on Windows",
+       "desc": "<strong>Procedure</strong><br />To install the CF CLI on Windows, follow the steps below:<ol><li>Download and unzip MSI installer package. <a href='https://cli.run.pivotal.io/stable?release=windows32' target='_blank'>Windows 32 bit</a> Or <a href='https://cli.run.pivotal.io/stable?release=windows64' target='_blank'>Windows 64 bit</a></li><li>Double-click the CF CLI executable file.</li><li>When prompted, click <strong>Install</strong>, and follow the screen instructions (for example, click <strong>Next</strong>).</li><li>After successful installation, click <strong>Close</strong>.</li></ol><strong>Next step</strong> To verify installation, open a terminal window and type <strong>cf</strong>. If the installation is successful, system displays the CF CLI help listing."
+    },
+    {
+       "title": "Installing CF CLI on Linux",
+       "desc": "<strong>Procedure</strong><br />To install the CF CLI on Linux, follow the steps below:<ol><li>Download the CF CLI package from the CLI releases page <a href='https://github.com/cloudfoundry/cli/releases' target='_blank'>https://github.com/cloudfoundry/cli/releases</a></li><li>Install using system package manager.</li></ol><strong>Note</strong>: These commands may require <em>sudo</em>.<ul><li>Debian/Ubuntu:</li></ul><blockquote>dpkg -i cf-cli-*.deb &amp;&amp; apt-get install –f</blockquote><ul><li style='list-style-type: none'><ul><li>Red Hat:</li></ul></li></ul><blockquote>rpm -i cf-cli-*.rpm</blockquote><strong>Next Step </strong>To verify your installation, open a terminal window and type cf. If your installation is successful, system displays the CF CLI help listing."
+    },
+    {
+       "title": "Install CF CLI on Mac OS X",
+       "desc": "<strong>Procedure</strong><br />To install the CF CLI on Mac OS X, follow the steps below:<ol><li>Download the CF CLI for <a href='https://cli.run.pivotal.io/stable?release=macosx64' target='_blank'>Mac OS X 64 bit</a></li><li>Open the <em>.pkg</em>The Installer wizard appears.</li><li>Click <strong>Continue</strong> to install the file.</li><li>Select a destination folder for file installation and click <strong>Continue</strong>.</li><li>When prompted, click <strong>Install</strong>, and follow the screen instructions (for example, click <strong>Next</strong>.).</li><li>After successful installation, click <strong>Close</strong>.</li></ol><strong>Next Step</strong> To verify installation, open a terminal window and type cf. If the installation is successful, system displays the CF CLI help listing."
+    },
+    {
+       "title": "Installing CF CLI on Windows",
+       "desc": "<strong>Procedure</strong> To install the CF CLI on Windows, follow the steps below:<ol><li>Download and unzip MSI installer package.<a href='https://cli.run.pivotal.io/stable?release=windows32' target='_blank'>Windows 32 bit</a> Or <a href='https://cli.run.pivotal.io/stable?release=windows64' target='_blank'>Windows 64 bit</a></li><li>Double-click the CF CLI executable file.</li><li>When prompted, click <strong>Install</strong>, and follow the screen instructions (for example, click <strong>Next</strong>).</li><li>After successful installation, click <strong>Close</strong>.</li></ol><strong>Next step</strong> To verify installation, open a terminal window and type <strong>cf</strong>. If the installation is successful, system displays the CF CLI help listing."
+    },
+    {
+       "title": "Installing CF CLI on Linux",
+       "desc": "<strong>Procedure</strong> To install the CF CLI on Linux, follow the steps below:<ol><li>Download the CF CLI package from the CLI releases page -<a href='https://github.com/cloudfoundry/cli/releases' target='_blank'>https://github.com/cloudfoundry/cli/releases</a></li><li>Install using system package manager.</li></ol><strong>Note</strong>: These commands may require <em>sudo</em>.<ul><li>Debian/Ubuntu:</li></ul><blockquote>dpkg -i path/to/cf-cli-*.deb &amp;&amp; apt-get install –f</blockquote><ul><li style='list-style-type: none'><ul><li>Red Hat:</li></ul></li></ul><blockquote>rpm -i path/to/cf-cli-*.rpm</blockquote><strong>Next Step </strong>To verify your installation, open a terminal window and type cf. If your installation is successful, system displays the CF CLI help listing."
+    },
+    {
+       "title": "Install CF CLI on Mac OS X",
+       "desc": "<strong>Procedure</strong> To install the CF CLI on Mac OS X, follow the steps below:<ol><li>Download the CF CLI for <a href='https://cli.run.pivotal.io/stable?release=macosx64' target='_blank'>Mac OS X 64 bit</a></li><li>Open the <em>.pkg</em> The Installer wizard appears.</li><li>Click <strong>Continue</strong> to install the file.</li><li>Select a destination folder for file installation and click <strong>Continue</strong>.</li><li>When prompted, click <strong>Install</strong>, and follow the screen instructions (for example, click <strong>Next</strong>.).</li><li>After successful installation, click <strong>Close</strong>.</li></ol><strong>Next Step</strong>To verify installation, open a terminal window and type cf. If the installation is successful, system displays the CF CLI help listing."
+    },
+    {
+       "title": "Uninstalling the CF CLI on Windows OS",
+       "desc": "<strong>Procedure</strong> To uninstall the CF Command Line Interface from Windows OS 7 and above, follow the instructions below:<ol><li>Navigate to the <strong>Control Panel</strong>.</li><li>Click <strong>Programs and Features</strong>.</li></ol>A list of the programs or software with installation date and version is displayed.<ol start='3'><li>Select <em>Cloud Foundry CLI VERSION</em> and click <strong>Uninstall</strong>.</li><li>After uninstallation, click <strong>OK</strong>.</li></ol>Alternate method to launch Programs and Features menu from the command line with the following command:<blockquote>  appwiz.cpl</blockquote>"
+    },
+    {
+       "title": "Uninstall CF CLI on Mac OS X",
+       "desc": "<strong>Procedure</strong> To uninstall the CF Command Line Interface from Mac OS X and above, follow the instructions below:<ol><li>Open the folder <strong>binary</strong>.</li><li>Under binary, delete the <strong>binary /usr/local/bin/cf</strong></li><li>Under directory, delete <strong>Directory /usr/local/share/doc/cf-cli</strong></li></ol>"
+    },
+    {
+       "title": "Uninstall CF CLI on Linux",
+       "desc": "<strong>Procedure</strong> To uninstall the CF Command Line Interface from Linux, follow the instructions below:Run the following command to uninstall the CF CLI using pip.<blockquote>$ sudo pip uninstall CF-cli</blockquote>"
+    },
+    {
+       "title": "Command Structure in the CF-CLI",
+       "desc": "The CF-CLI is a multipart string on the command line, as shown below:<blockquote>$ cf &lt;command&gt; &lt;subcommand&gt; [options and parameters]</blockquote><ul><li>It begins with the base call to <em>cf</em>.</li><li>The first part indicates a top-level command, which often represents a CF service supported in the CF-CLI.</li><li>The top-level command (CF service) can have additional subcommands, which often represents the specific operation.</li><li>Whereas, the general CLI options and operation parameters are specified on the command line in any order.</li><li>If an exclusive parameter is repeated several times, then only the <em>last value</em></li><li>Options and Parameters can take various types of input values, such as Orgs and Spaces.</li></ul>"
+    },
+    {
+       "title": "Help",
+       "desc": "<p class='Section'>Purpose: </p><p class='Normal1'><span lang='EN-US'>Use this command to view the help content on CF-CLI.</span></p><p class='Section'>Syntax:</p><blockquote>$ cf --help</blockquote><img class='size-full wp-image-136 alignnone' src='https://s3.amazonaws.com/acf-console/user-guide/1-2.png' alt='' width='717' height='322' />"
+    },
+    {
+       "title": "Login",
+       "desc": "<p class='Section'>Purpose: </p><p class='Normal1'><span lang='EN-US'>Use the command to log in to the cloud foundry server. The system connects with the server only if you have right to access it. If you do not have sufficient access rights, the system displays the error message. When you enter the command, the system asks for API. However, if the API is already set, the system would ask for the user email and password.</span></p><p class='Section'>Syntax:</p><blockquote>$ cf login</blockquote><img class=' wp-image-139 alignnone' src='https://s3.amazonaws.com/acf-console/user-guide/2-1.png' alt='' width='486' height='143' />"
+    },
+    {
+       "title": "Password",
+       "desc": "<p class='Section'>Purpose: </p><p class='Normal1'><span lang='EN-US'>Use this command to change the user password post login  </span></p><p class='Section'>Syntax:</p><blockquote>$ cf passwd</blockquote>Example:<br /><img class='alignnone size-full wp-image-142' src='https://s3.amazonaws.com/acf-console/user-guide/3-1.png' alt='' width='396' height='19' />"
+    },
+    {
+       "title": "Logout",
+       "desc": "Purpose: Use the command to logout of the cloud foundry server .Syntax:<blockquote>$ cf logout</blockquote>Example:<br /><img class='alignnone size-full wp-image-145' src='https://s3.amazonaws.com/acf-console/user-guide/4-1.png' alt='' width='398' height='51' />"
+    },
+    {
+       "title": "Target",
+       "desc": "Purpose: Use this command to access or redirect to the targeted object (for example <em>org</em> or <em>space)</em> and view its details.Syntax:<blockquote>$ cf target -o &lt;org name&gt;</blockquote><blockquote>$ cf target -o &lt;org name&gt; -s &lt;space name&gt;</blockquote>Example:<br /><img class='alignnone size-full wp-image-148' src='https://s3.amazonaws.com/acf-console/user-guide/5.png' alt='' width='973' height='193' />"
+    },
+    {
+       "title": "API",
+       "desc": "Purpose: Use this command to navigate or redirect to the targeted API URL and view corresponding details.Syntax:<blockquote>$ cf target &lt;API URL&gt;</blockquote>Example:<br /><img class='alignnone size-full wp-image-151' src='https://s3.amazonaws.com/acf-console/user-guide/6.png' alt='' width='873' height='46' />"
+    },
+    {
+       "title": "Authentication",
+       "desc": "Purpose: Use this command to authenticate or validate user interactivity with the system.Syntax:<blockquote>$ cf auth</blockquote>Example:<br /><img class='alignnone size-full wp-image-154' src='https://s3.amazonaws.com/acf-console/user-guide/7.png' alt='' width='943' height='227' />"
+    },
+    {
+       "title": "Applications",
+       "desc": "Purpose: Use this command to  list of all available applications.<em>Note :- The user must be targeted to an org and space to list the applications</em>Syntax:<blockquote>$ cf apps</blockquote>Example:<br /><img class='alignnone size-full wp-image-157' src='https://s3.amazonaws.com/acf-console/user-guide/8.png' alt='' width='626' height='136' />"
+    },
+    {
+       "title": "Application health",
+       "desc": "Purpose: Use this command to view health and status for an application.Syntax:<blockquote>$ cf app APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-160' src='https://s3.amazonaws.com/acf-console/user-guide/9.png' alt='' width='663' height='236' />"
+    },
+    {
+       "title": "Push",
+       "desc": "Purpose: Use this command to Push a new app or sync changes to an existing app.Syntax:<blockquote>$ cf push APP_NAME –b BUILDPACK_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-163' src='https://s3.amazonaws.com/acf-console/user-guide/10.png' alt='' width='1065' height='354' />"
+    },
+    {
+       "title": "Scale",
+       "desc": "Purpose: Use this command to Change or view the instance count, hard-disk space limit, and memory limit for an app.Syntax:<blockquote>$ cf scale APP_NAME [-i INSTANCES] [-k DISK] [-m MEMORY] [-f]</blockquote>Example:<br /><img class='alignnone size-full wp-image-166' src='https://s3.amazonaws.com/acf-console/user-guide/11.png' alt='' width='958' height='449' />"
+    },
+    {
+       "title": "Delete",
+       "desc": "Purpose: Use this command to delete an app.Syntax:<blockquote>$ cf delete APP_NAME [-f -r]</blockquote>Example:<br /><img class='alignnone size-full wp-image-169' src='https://s3.amazonaws.com/acf-console/user-guide/12.png' alt='' width='986' height='189' />"
+    },
+    {
+       "title": "Rename",
+       "desc": "Purpose: Use this command to rename an app.Syntax:<blockquote>$ cf rename APP_NAME NEW_APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-172' src='https://s3.amazonaws.com/acf-console/user-guide/13.png' alt='' width='931' height='75' />"
+    },
+    {
+       "title": "Start",
+       "desc": "Purpose: Use this command to start an app.Syntax:<blockquote>$ cf start APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-175' src='https://s3.amazonaws.com/acf-console/user-guide/14.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Stop",
+       "desc": "Purpose: Use this command to stop or close an app.Syntax:<blockquote>$ cf stop APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-178' src='https://s3.amazonaws.com/acf-console/user-guide/15.png' alt='' width='788' height='76' />"
+    },
+    {
+       "title": "Restart",
+       "desc": "Purpose: Use this command to restart the app.Syntax:<blockquote>$ cf restart APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-181' src='https://s3.amazonaws.com/acf-console/user-guide/16.png' alt='' width='814' height='487' />"
+    },
+    {
+       "title": "Restage",
+       "desc": "Purpose: Use this command to restage the app. Syntax:<blockquote>$ cf restage APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-184' src='https://s3.amazonaws.com/acf-console/user-guide/17.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Restart App Instance",
+       "desc": "Purpose: Use this command to restart a particular instance of an applicationSyntax:<blockquote>$ cf restart-app-instance APP_NAME INDEX</blockquote>Example:<br /><img class='alignnone size-full wp-image-187' src='https://s3.amazonaws.com/acf-console/user-guide/18.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Events",
+       "desc": "Purpose: Use this command to view recent app events.Syntax:<blockquote>$ cf events APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-190' src='https://s3.amazonaws.com/acf-console/user-guide/19.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Logs",
+       "desc": "Purpose: Use this command to view recent logs for an app.Syntax:<blockquote><p style='text-align: left;'>$ cf logs APP_NAME</p></blockquote>Example:<br /><img class='alignnone  wp-image-193' src='https://s3.amazonaws.com/acf-console/user-guide/20.png' alt='' width='711' height='164' />&nbsp;<img class='alignnone  wp-image-196' src='https://s3.amazonaws.com/acf-console/user-guide/21.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Environment",
+       "desc": "Purpose: Use this command to view all environment variables for an app.Syntax:<blockquote>$ cf env APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-199' src='https://s3.amazonaws.com/acf-console/user-guide/22.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Set Environment",
+       "desc": "Purpose: Use this command to set (configure) an environment variable for an app.Syntax:<blockquote>$ cf set-env APP_NAME ENV_VAR_NAME ENV_VAR_VALUE</blockquote>Example:<br /><img class='alignnone size-full wp-image-202' src='https://s3.amazonaws.com/acf-console/user-guide/23.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Unset Environment",
+       "desc": "Purpose: Use this command to remove an environment variable for an app.Syntax:<blockquote>$ cf unset-env APP_NAME ENV_VAR_NAME ENV_VAR_VALUE</blockquote>Example:<br /><img class='alignnone size-full wp-image-205' src='https://s3.amazonaws.com/acf-console/user-guide/24.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Stacks",
+       "desc": "Purpose: Use this command to view the list of all stacks. A stack is a pre-built file system, including an operating system that can run apps.Syntax:<blockquote>$ cf stacks</blockquote>Example:<br /><img class='alignnone size-full wp-image-208' src='https://s3.amazonaws.com/acf-console/user-guide/25.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Stack",
+       "desc": "Purpose: Use this command to view information for a stack.Syntax:<blockquote>$ cf stack STACK_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-211' src='https://s3.amazonaws.com/acf-console/user-guide/26.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Copy Source",
+       "desc": "Purpose: Use this command to copy the app source code from one application to another. Unless overridden, the copy-source command will restart the application.Syntax:<blockquote>$ cf copy-source SOURCE-APP TARGET-APP [-S TARGET-SPACE [-O TARGET-ORG]] [--no-restart]</blockquote>Where,<ul><li><strong>-S </strong>stands for the Space that contains the targeted application</li><li><strong>- O </strong>stands for the Org that contains the targeted application</li><li><strong>--no </strong>stands for Override restart of the application in the targeted environment when copy-source completes</li></ul>"
+    },
+    {
+       "title": "Create App Manifest",
+       "desc": "Purpose: Use this command to create an app manifest for the app that has been pushed successfully.Syntax:<blockquote>$ cf create-app-manifest APP_NAME [-p /path/to/&lt;app-name&gt;-manifest.yml]</blockquote>Where,<ul><li>-<strong>p </strong>specifies a path for file creation. If path is not specified, manifest file is created in current working directory.</li></ul>Example:<br /><img class='alignnone size-full wp-image-217' src='https://s3.amazonaws.com/acf-console/user-guide/28.png' alt='' width='70%' height='70%' />"
+    },
+    {
+       "title": "Get Health Check",
+       "desc": "Purpose: Use this command to get the health_check_type value of an app.Syntax:<blockquote>$ cf get-health-check APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-220' src='https://s3.amazonaws.com/acf-console/user-guide/29.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Set Health Check",
+       "desc": "Purpose: Use this command to set health_check_type flag to either <em>port</em> or <em>none</em>.Syntax:<blockquote>$ cf set-health-check APP_NAME (process | port | http [--endpoint PATH])</blockquote>Where,<ul><li><strong>--endpoint</strong> specifies the path on the app (Default: /)</li></ul>Example:<br /><img class='alignnone size-full wp-image-223' src='https://s3.amazonaws.com/acf-console/user-guide/30.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Enable SSH",
+       "desc": "Purpose: Use this command to enable SSH for the application.Syntax:<blockquote>$ cf enable-ssh APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-226' src='https://s3.amazonaws.com/acf-console/user-guide/31.png' alt='' width='993' height='162' />"
+    },
+    {
+       "title": "Disable SSH",
+       "desc": "Purpose: Use this command to disable SSH for the application.Syntax:$ cf disable-ssh APP_NAMEExample:<br /><img class='alignnone size-full wp-image-229' src='https://s3.amazonaws.com/acf-console/user-guide/32.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "SSH Enabled",
+       "desc": "Purpose: Use this command to view whether SSH is enabled on an application container instance.Syntax:<blockquote>$ cf ssh-enabled APP_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-232' src='https://s3.amazonaws.com/acf-console/user-guide/33.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "SSH",
+       "desc": "Purpose: Use this command to connect SSH to an application container instance.Syntax:<blockquote>$ cf ssh APP_NAME [-i app-instance-index] [-c Command] [-L (bind address:)port:host:hostport] [--skip-host-validation] [--skip-remote-execution] [--request-pseudo-tty] [--force-pseudo-tty] [--disable-pseudo-tty]</blockquote>Where,<ul><li><strong>--app-instance-index, -i</strong> stands for application instance index (Default: 0)</li><li><strong>--command, -c</strong> stands for command to run. This flag can be defined more than once.</li><li><strong>--disable-pseudo-tty, -T</strong> stands for disable pseudo-tty allocation</li><li><strong>--force-pseudo-tty</strong> stands for force pseudo-tty allocation</li><li><strong>-L</strong> stands for local port forward specification. This flag can be defined more than once.</li><li><strong>--request-pseudo-tty, -t</strong> stands for request pseudo-tty allocation</li><li><strong>--skip-host-validation, -k</strong> stands for skip host key validation</li><li><strong>--skip-remote-execution, -N</strong> - Do not execute a remote command</li></ul>Example:<br /><img class='alignnone size-full wp-image-235' src='https://s3.amazonaws.com/acf-console/user-guide/34.png' alt='' width='876' height='80' />"
+    },
+    {
+       "title": "Marketplace",
+       "desc": "Purpose: Use this command to view a list of available offerings in the marketplace.Syntax:<blockquote>$ cf marketplace</blockquote>Example:<br /><img class='alignnone size-full wp-image-238' src='https://s3.amazonaws.com/acf-console/user-guide/35.png' alt='' width='950' height='476' />"
+    },
+    {
+       "title": "Services",
+       "desc": "Purpose: Use this command to view a list of available service instances.Syntax:<blockquote>$ cf services</blockquote>Example:<br /><img class='alignnone size-full wp-image-241' src='https://s3.amazonaws.com/acf-console/user-guide/36.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Service",
+       "desc": "Purpose: Use this command to view health of the running service instances.Syntax:<blockquote>$ cf service &lt;service-instance-name&gt;</blockquote><img class='alignnone size-full wp-image-496' src='https://faq.apps.eu01.cf.canopy-cloud.com/wp-content/uploads/2019/05/2019-05-17-17_01_00-.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Create Service",
+       "desc": "Purpose: Use this command to create new service instances.Syntax:<blockquote>$ cf create-service &lt;SERVICE_NAME&gt;&lt;PLAN_NAME&gt;&lt;SERVICE_INSTANCE_NAME&gt;</blockquote>Example:<br /><img class='alignnone size-full wp-image-247' src='https://s3.amazonaws.com/acf-console/user-guide/38.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Update Service",
+       "desc": "Purpose: Use this command toupdate service instances.Syntax:<blockquote>$ cf update-service SERVICE_INSTANCE [-p NEW_PLAN] [-c PARAMETERS_AS_JSON] [-t TAGS]</blockquote>Where,<ul><li><strong>-c</strong> stands for valid JSON object containing service-specific configuration parameters, provided either in-line or in a file. For a list of supported configuration parameters, see documentation for the particular service offering.</li><li><strong>-p</strong> stands for change service plan for a service instance</li><li><strong>-t</strong> stands for user provided tags</li></ul>Example:<br /><img class='alignnone size-full wp-image-250' src='https://s3.amazonaws.com/acf-console/user-guide/39.png' alt='' width='746' height='108' />"
+    },
+    {
+       "title": "Delete Service",
+       "desc": "Purpose: Use this command to delete service instances.Syntax:<blockquote>$ cf delete-service SERVICE_INSTANCE [-f]</blockquote>Where,<ul><li><strong>-f</strong> stands for force deletion without confirmation.</li></ul>Example:<br /><img class='alignnone size-full wp-image-253' src='https://s3.amazonaws.com/acf-console/user-guide/40.png' alt='' width='812' height='374' />"
+    },
+    {
+       "title": "Rename Service",
+       "desc": "Purpose: Use this command to rename service instances.Syntax:<blockquote>$ cf rename-service OLD_SERVICE_INSTANCE_NAME NEW_SERVICE_INSTANCE_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-256' src='https://s3.amazonaws.com/acf-console/user-guide/41.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Create Service Key",
+       "desc": "Purpose: Use this command to create key for service instances.Syntax:<blockquote>$ cf create-service-key SERVICE_INSTANCE SERVICE_KEY -c PATH_TO_FILE/ JSON PARAMETERS</blockquote>Where,<ul><li><strong>-c</strong> stands for valid JSON object containing service-specific configuration parameters, provided either in-line or in a file. For a list of supported configuration parameters, see documentation for the particular service offering.</li></ul>Example:<br /><img class='alignnone size-full wp-image-259' src='https://s3.amazonaws.com/acf-console/user-guide/42.png' alt='' width='80%' height='80%' /><img class='alignnone size-full wp-image-262' src='https://s3.amazonaws.com/acf-console/user-guide/43.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Service Keys",
+       "desc": "Purpose: Use this command to view the list of keys available for a service instance.Syntax:<blockquote>$ cf service-keys SERVICE_INSTANCE</blockquote>Example:<br /><img class='alignnone size-full wp-image-265' src='https://s3.amazonaws.com/acf-console/user-guide/44.png' alt='' width='887' height='169' />"
+    },
+    {
+       "title": "Service Key",
+       "desc": "Purpose: Use this command to view service key information.Syntax:<blockquote>$ cf service-key SERVICE_INSTANCE SERVICE_KEY</blockquote>Example:<br /><img class='alignnone size-full wp-image-268' src='https://s3.amazonaws.com/acf-console/user-guide/45.png' alt='' width='990' height='222' />"
+    },
+    {
+       "title": "Delete Service Key",
+       "desc": "Purpose: Use this command to delete a service key.Syntax:<blockquote>$ cf delete-service-key SERVICE_INSTANCE SERVICE_KEY [-f]</blockquote>Where,<ul><li>-f stands for force deletion without confirmation.</li></ul>Example:<br /><img class='alignnone size-full wp-image-271' src='https://s3.amazonaws.com/acf-console/user-guide/46.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Bind Service",
+       "desc": "Purpose: Use this command to bind a service instance to an app.Syntax:<blockquote>$ cf bind-service &lt;APP-NAME&gt;&lt;SERVICE_INSTANCE_NAME&gt;</blockquote>Example:<br /><img class='alignnone size-full wp-image-274' src='https://s3.amazonaws.com/acf-console/user-guide/47.png' alt='' width='884' height='83' />"
+    },
+    {
+       "title": "Unbind Service",
+       "desc": "Purpose: Use this command to unbind a service instance to an app.Syntax:<blockquote>$ cf unbind-service &lt;APP-NAME&gt;&lt;SERVICE_INSTANCE_NAME&gt;</blockquote>Example:<br /><img class='alignnone size-full wp-image-277' src='https://s3.amazonaws.com/acf-console/user-guide/48.png' alt='' width='900' height='75' />"
+    },
+    {
+       "title": "Create User Provided Service",
+       "desc": "Purpose: Use this command to make a user-provided service instance available to cf apps.Syntax:<blockquote>$ cf create-user-provided-service SERVICE_INSTANCE -p PATH_TO_FILE</blockquote>Where,<ul><li>-p stands for credentials, provided inline or in a file, to be exposed in the VCAP_SERVICES environment variable for bound applications.</li></ul>Example:<br /><img class='alignnone size-full wp-image-280' src='https://s3.amazonaws.com/acf-console/user-guide/49.png' alt='' width='593' height='37' /><img class='alignnone size-full wp-image-283' src='https://s3.amazonaws.com/acf-console/user-guide/50.png' alt='' width='80%' height='80%' /><img class='alignnone size-full wp-image-286' src='https://s3.amazonaws.com/acf-console/user-guide/51.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Update User Provided Service",
+       "desc": "Purpose: Use this command to update user-provided service instance name value pairs.Syntax:<blockquote>$ cf update-user-provided-service SERVICE_INSTANCE -p PATH_TO_FILE</blockquote>Where,<ul><li>-p stands for credentials, provided inline or in a file, to be exposed in the VCAP_SERVICES environment variable for bound applications.</li></ul>Example:<br /><img class='alignnone size-full wp-image-289' src='https://s3.amazonaws.com/acf-console/user-guide/52.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Orgs",
+       "desc": "Purpose: Use this command to view the list of all orgs.Syntax:<blockquote>$ cf orgs</blockquote>Example:<br /><img class='alignnone size-full wp-image-292' src='https://s3.amazonaws.com/acf-console/user-guide/53.png' alt='' width='627' height='233' />"
+    },
+    {
+       "title": "Org",
+       "desc": "Purpose: Use this command to view org info.Syntax:<blockquote>$ cf org</blockquote>Example:<br /><img class='alignnone size-full wp-image-295' src='https://s3.amazonaws.com/acf-console/user-guide/54.png' alt='' width='875' height='174' />"
+    },
+    {
+       "title": "Create Org",
+       "desc": "Purpose: Use this command to create an org with specified name.Use <em>cf target –o ORG_NAME</em> to target newly created org.Syntax:<blockquote>$ cf create-org ORG_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-298' src='https://s3.amazonaws.com/acf-console/user-guide/55.png' alt='' width='744' height='200' />"
+    },
+    {
+       "title": "Delete Org",
+       "desc": "Purpose: Use this command to delete an org with specified name.Syntax:<blockquote>$ cf delete-org ORG_NAME</blockquote>Example:<br /><img class='alignnone size-full wp-image-301' src='https://s3.amazonaws.com/acf-console/user-guide/56.png' alt='' width='887' height='336' />"
+    },
+    {
+       "title": "Rename Org",
+       "desc": "Purpose: Use this command to rename an org with specified name.Syntax:<blockquote><p style='text-align: left;'>$ cf rename-org ORG_NAME NEW_ORG_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/57.png' alt='' width='534' height='317' />"
+    },
+    {
+       "title": "Spaces",
+       "desc": "Purpose: Use this command to view the list all spaces in an org.Syntax:<blockquote><p style='text-align: left;'>$ cf spaces</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/58.png' alt='' width='511' height='126' />"
+    },
+    {
+       "title": "Space",
+       "desc": "Purpose: Use this command to view space information.Syntax:<blockquote><p style='text-align: left;'>$ cf space SPACE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/59.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Create Space",
+       "desc": "Purpose: Use this command to create a new space. First target an org before creating a new space. For example, $ cf target –o ORG_NAME Use 'cf target –o ORG_NAME –s SPACE_NAME' to target newly created space.Syntax:<blockquote><p style='text-align: left;'>$ cf create-space SPACE_NAME [-o ORG] [-q SPACE_QUOTA]</p></blockquote>Where:<ol>-o stands for organization -q stands for quota to assign to the newly created space</ol>"
+    },
+    {
+       "title": "Delete Space",
+       "desc": "Purpose: Use this command to delete an existing space. The system asks for confirmation to delete the space. Type yes to delete it permanently. Type no to cancel the action.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-space SPACE_NAME [-o ORG] [-f]</p></blockquote>Where: <ol>-f stands for force deletion without confirmation. -o stands for deleting space within specified org.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/60.png' alt='' width='794' height='228' />"
+    },
+    {
+       "title": "Rename Space",
+       "desc": "Purpose: Use this command to rename an existing space.Syntax:<blockquote><p style='text-align: left;'>$ cf rename-space SPACE_NAME NEW_SPACE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/61.png' alt='' width='684' height='293' />"
+    },
+    {
+       "title": "Allow Space SSH",
+       "desc": "Purpose: Use this command to allow the SSH access for the space.Syntax:<blockquote><p style='text-align: left;'>$ cf allow-space-ssh SPACE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/62.png' alt='' width='724' height='111' />"
+    },
+    {
+       "title": "Disallow Space SSH",
+       "desc": "Purpose: Use this command to restrict the SSH access for the space.Syntax:<blockquote><p style='text-align: left;'>$ cf disallow-space-ssh SPACE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/63.png' alt='' width='745' height='105' />"
+    },
+    {
+       "title": "Space SSH Allowed",
+       "desc": "Purpose: Use this command to report whether SSH is allowed in a space or not.Syntax:<blockquote><p style='text-align: left;'>$ cf space-ssh-allowed SPACE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/64.png' alt='' width='767' height='78' />"
+    },
+    {
+       "title": "Domains",
+       "desc": "Purpose: Use this command to view the list of domains in the target org.Syntax:<blockquote><p style='text-align: left;'>$ cf domains</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/65.png' alt='' width='567' height='110' />"
+    },
+    {
+       "title": "Create Domain",
+       "desc": "Purpose: Use this command to create a new domain in an org.Syntax:<blockquote><p style='text-align: left;'>$ cf create-domain ORG DOMAIN</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/66.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Delete Domain",
+       "desc": "Purpose: Use this command to delete an existing domain from an org.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-domain DOMAIN [-f]</p></blockquote>Where: <ol>-f stands for force deletion of the targeted domain without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/67.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Create Shared Domain",
+       "desc": "Purpose: Use this command to create a new domain that can be used by all orgs. Only administrator can create this type of domains.Syntax:<blockquote><p style='text-align: left;'>$ cf create-shared-domain DOMAIN [--router-group ROUTER_GROUP]</p></blockquote>Where: <ol>--router-group means routes for this domain will be configured only on the specified router group</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/68.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Delete Shared Domain",
+       "desc": "Purpose: Use this command to delete an existing shared domain. Only administrator can delete this type of domains.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-shared-domain DOMAIN [-f]</p></blockquote>Where: <ol>-f stands for force deletion of the targeted shared domain without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/69.png' alt='' width='922' height='88' />"
+    },
+    {
+       "title": "Routes",
+       "desc": "Purpose: Use this command to view a list of all routes in the targeted space and organization.Syntax:<blockquote><p style='text-align: left;'>$ cf routes [--orglevel]</p></blockquote>Where: <ol>--orglevel list all the routes for all spaces of current organization.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/70.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Create Route",
+       "desc": "Purpose: Use this command to create a new URL route in a space.Syntax:<blockquote><p style='text-align: left;'>$ cf create-route SPACE DOMAIN [--hostname HOSTNAME] [--path PATH]</p></blockquote><blockquote><p style='text-align: left;'>$ cf create-route SPACE DOMAIN [--port PORT] [--random PORT]</p></blockquote>Where: <ol>--hostname, -n stands for hostname for the HTTP route (required for shared domains) --path stands for path for the HTTP route --port stands for port for the TCP route --random-port creates a random port for the TCP route</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/71.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Check Route",
+       "desc": "Purpose: Use this command to create a new URL route in a space.Syntax:<blockquote><p style='text-align: left;'>$ cf check-route HOST DOMAIN [--path PATH]</p></blockquote>Where: <ol>--path stands for the path for the targeted route.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/72.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Map Route",
+       "desc": "Purpose: Use this command to add a URL route to an application.Syntax:<blockquote><p style='text-align: left;'>$ cf map-route APP_NAME DOMAIN [--hostname HOSTNAME] [--path PATH]</p></blockquote><blockquote><p style='text-align: left;'>$ cf map-route APP_NAME DOMAIN [--port PORT] [--random PORT]</p></blockquote>Where: <ol>--hostname, -n stands for hostname for the HTTP route (required for shared domains) --path stands for path for the HTTP route --port stands for port for the TCP route --random-port creates a random port for the TCP route</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/73.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Unmap Route",
+       "desc": "Purpose: Use this command to remove a URL route linked to any application.Syntax:<blockquote><p style='text-align: left;'>$ cf unmap-route APP_NAME DOMAIN [--hostname HOSTNAME] [--path PATH]</p></blockquote><blockquote><p style='text-align: left;'>$ cf unmap-route APP_NAME DOMAIN [--port PORT] [--random PORT]</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/74.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Delete Route",
+       "desc": "Purpose: Use this command to delete a URL route linked to any application.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-route APP_NAME DOMAIN [--hostname HOSTNAME] [--path PATH]</p></blockquote><blockquote><p style='text-align: left;'>$ cf delete-route APP_NAME DOMAIN [--port PORT] [--random PORT]</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/75.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Delete Orphaned Routes",
+       "desc": "Purpose: Use this command to forcefully delete all orphaned routes that are not mapped to apps.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-orphaned-routes [-f]</p></blockquote>Where:<ol>-f stands for force deletion of the targeted shared domain without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/76.png' alt='' width='735' height='129' />"
+    },
+    {
+       "title": "Router Groups",
+       "desc": "Purpose: Use this command to view a list of all router groups.Syntax:<blockquote><p style='text-align: left;'>$ cf router-groups</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/77.png' alt='' width='617' height='132' />"
+    },
+    {
+       "title": "Buildpacks",
+       "desc": "Purpose: Use this command to view the list of all buildpacks.Syntax:<blockquote><p style='text-align: left;'>$ cf buildpacks</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/78.png' alt='' width='960' height='338' />"
+    },
+    {
+       "title": "Create Buildpack",
+       "desc": "Purpose: Use this command to create a new buildpack.Syntax:<blockquote><p style='text-align: left;'>$ cf create-buildpack BUILDPACK PATH POSITION [--enable|--disable]</p></blockquote>Where: <ol>--disable stands for disable the buildpack from being used for staging --enable  stands for enable the buildpack to be used for staging</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/79.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Update Buildpack",
+       "desc": "Purpose: Use this command to update a buildpack.Syntax:<blockquote><p style='text-align: left;'>$ cf update-buildpack BUILDPACK [-p PATH] [-i POSITION] [--enable|--disable] [--lock|--unlock]</p></blockquote>Where: <ol>--disable stands for disable the buildpack from being used for staging --enable  stands for enable the buildpack to be used for staging -i stands for the order in which the buildpacks are checked during buildpack auto-detection --lock stands for locking the buildpack to prevent updates -p stands for path to directory or zip file --unlock stands for unlocking the buildpack to enable updates</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/80.png' alt='' width='814' height='93' />"
+    },
+    {
+       "title": "Rename Buildpack",
+       "desc": "Purpose: Use this command to rename a buildpack.Syntax:<blockquote><p style='text-align: left;'>$ cf rename-buildpack BUILDPACK_NAME NEW_BUILDPACK_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/81.png' alt='' width='822' height='97' />"
+    },
+    {
+       "title": "Delete-Buildpack",
+       "desc": "Purpose: Use this command to delete a buildpack.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-buildpack BUILDPACK [-f]</p></blockquote>Where:<ol>-f stands for force deletion of the targeted buildpack without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/82.png' alt='' width='732' height='93' />"
+    },
+    {
+       "title": "Create User",
+       "desc": "Purpose: Use this command to create a new user.Syntax:<blockquote><p style='text-align: left;'>$ cf create-user USERNAME PASSWORD</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/83.png' alt='' width='837' height='217' />"
+    },
+    {
+       "title": "Delete User",
+       "desc": "Purpose: Use this command to delete an existing user.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-user USERNAME</p></blockquote>Example:&nbsp;<img class='alignnone size-full wp-image-502' src='https://faq.apps.eu01.cf.canopy-cloud.com/wp-content/uploads/2019/05/2019-05-17-17_34_55-Window.png' alt='' width='396' height='162' />"
+    },
+    {
+       "title": "Org Users",
+       "desc": "Purpose: Use this command to view org users by role.Syntax:<blockquote><p style='text-align: left;'>$ cf org-users ORG_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/85.png' alt='' width='531' height='264' />"
+    },
+    {
+       "title": "Set Org Role",
+       "desc": "Purpose: Use this command to assign an org role to a user.Syntax:<blockquote><p style='text-align: left;'>$ cf set-org-role USERNAME ORG ROLE</p></blockquote>Where:ORG ROLE can be –  <ol>OrgManager - Invite and manage users, select and change plans, and set spending limits BillingManager - Create and manage the billing account and payment info OrgAuditor - Read-only access to org info and reports</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/86.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Unset Org Role",
+       "desc": "Purpose: Use this command to remove an org role of a user.Syntax:<blockquote><p style='text-align: left;'>$ cf unset-org-role USERNAME ORG ROLE</p></blockquote>Where:ORG ROLE can be –  <ol>OrgManager - Invite and manage users, select and change plans, and set spending limits BillingManager - Create and manage the billing account and payment info OrgAuditor - Read-only access to org info and reports</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/87.png' alt='' width='992' height='82' />"
+    },
+    {
+       "title": "Space Users",
+       "desc": "Purpose: Use this command to view space users by role.Syntax:<blockquote><p style='text-align: left;'>$ cf space-users ORG_NAME SPACE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/88.png' alt='' width='678' height='282' />"
+    },
+    {
+       "title": "Set Space Role",
+       "desc": "Purpose: Use this command to assign a space role to a user.Syntax:<blockquote><p style='text-align: left;'>$ cf set-space-role USERNAME ORG_NAME SPACE_NAME SPACE_ROLE</p></blockquote>Where:SPACE ROLE can be –  <ol>SpaceManager - Invite and manage users, and enable features for a given space SpaceDeveloper - Create and manage apps and services, and see logs and reports SpaceAuditor - View logs, reports, and settings on this space</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/89.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Unset Space Role",
+       "desc": "Purpose: Use this command to remove a space role to a user.Syntax:<blockquote><p style='text-align: left;'>$ cf unset-space-role USERNAME ORG_NAME SPACE_NAME SPACE_ROLE</p></blockquote>Where:SPACE ROLE  can be –  <ol>SpaceManager - Invite and manage users, and enable features for a given space SpaceDeveloper - Create and manage apps and services, and see logs and reports SpaceAuditor - View logs, reports, and settings on this space</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/90.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Quotas",
+       "desc": "Purpose: Use this command to view a list of the entire available usage quotas.Syntax:<blockquote><p style='text-align: left;'>$ cf quotas</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/91.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Quota",
+       "desc": "Purpose: Use this command to view quota related information.Syntax:<blockquote><p style='text-align: left;'>$ cf quota QUOTA</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/92.png' alt='' width='508' height='267' />"
+    },
+    {
+       "title": "Set Quota",
+       "desc": "Purpose: Use this command to assign a quota to an org.Syntax:<blockquote><p style='text-align: left;'>$ cf set-quota ORG QUOTA</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/93.png' alt='' width='589' height='88' />"
+    },
+    {
+       "title": "Create Quota",
+       "desc": "Purpose: Use this command to define a new resource quota.Syntax:<blockquote><p style='text-align: left;'>$ cf create-quota QUOTA [-m TOTAL_MEMORY] [-i INSTANCE_MEMORY] [-r ROUTES] [-s SERVICE_INSTANCES] [-a APP_INSTANCES] [--allow-paid-service-plans] [--reserved-route-ports RESERVED_ROUTE_PORTS]</p></blockquote>Where: <ol>-a stands for total number of application instances. -1 represents an unlimited amount. (Default: unlimited) --allow-paid-service-plans can provision instances of paid service plans -i stands for maximum amount of memory an application instance can have (e.g. 1024M, 1G, 10G). -1 represents an unlimited amount. -m stands for total amount of memory a space can have (e.g. 1024M, 1G, 10G) -r stands for total number of routes --reserved-route-ports provides maximum number of routes that may be created with reserved ports (Default: 0) -s stands for total number of service instances</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/94.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Delete Quota",
+       "desc": "Purpose: Use this command to delete the existing quota.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-quota QUOTA [-f]</p></blockquote>Where:   <ol> -f stands for force deletion of the targeted quota without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/95.png' alt='' width='610' height='78' />"
+    },
+    {
+       "title": "Update Quota",
+       "desc": "Purpose: Use this command to update an existing resource quota.Syntax:<blockquote><p style='text-align: left;'>$ cf update-quota QUOTA [-m TOTAL_MEMORY] [-i INSTANCE_MEMORY] [-n NEW_NAME] [-r ROUTES] [-s SERVICE_INSTANCES] [-a APP_INSTANCES] [--allow-paid-service-plans | --disallow-paid-service-plans] [--reserved-route-ports RESERVED_ROUTE_PORTS]</p></blockquote>Where:   <ol>-a stands for total number of application instances. -1 represents an unlimited amount. --allow-paid-service-plans can provision instances of paid service plans --disallow-paid-service-plans cannot provision instances of paid service plans -i stands for maximum amount of memory an application instance can have (e.g. 1024M, 1G, 10G) -m stands for total amount of memory (e.g. 1024M, 1G, 10G) -n stands for new name -r stands for total number of routes --reserved-route-ports stands for maximum number of routes that may be created with reserved ports -s stands for total number of service instances</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/96.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Share Private Domain",
+       "desc": "Purpose: Use this command to Share a private domain with an org.Syntax:<blockquote><p style='text-align: left;'>$ cf share-private-domain ORG_NAME DOMAIN_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/97.png' alt='' width='721' height='83' />"
+    },
+    {
+       "title": "Unshare Private Domain",
+       "desc": "Purpose: Use this command to remove sharing of a private domain with an org.Syntax:<blockquote><p style='text-align: left;'>$ cf unshare-private-domain ORG_NAME DOMAIN_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/98.png' alt='' width='828' height='89' />"
+    },
+    {
+       "title": "Space Quotas",
+       "desc": "Purpose: Use this command to view the list of all the available space resource quotas.Syntax:<blockquote><p style='text-align: left;'>$ cf space-quotas</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/99.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Space Quota",
+       "desc": "Purpose: Use this command to view the space quota related information.Syntax:<blockquote><p style='text-align: left;'>$ cf space-quota SPACE_QUOTA_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/100.png' alt='' width='633' height='319' />"
+    },
+    {
+       "title": "Create Space Quota",
+       "desc": "Purpose: Use this command to define a new space resource quota.Syntax:<blockquote><p style='text-align: left;'>$ cf create-space-quota QUOTA [-i INSTANCE_MEMORY] [-m MEMORY] [-r ROUTES] [-s SERVICE_INSTANCES] [-a APP_INSTANCES] [--allow-paid-service-plans] [--reserved-route-ports RESERVED_ROUTE_PORTS]</p></blockquote>Where: <ol>-a stands for total number of application instances. -1 represents an unlimited amount. (Default: unlimited) --allow-paid-service-plans can provision instances of paid service plans (Default: disallowed) -i stands for maximum amount of memory an application instance can have (e.g. 1024M, 1G, 10G). -1 represents an unlimited amount. (Default: unlimited) -m stands for total amount of memory a space can have (e.g. 1024M, 1G, 10G) -r stands for total number of routes --reserved-route-ports stands for maximum number of routes that may be created with reserved ports (Default: 0) -s stands for total number of service instances</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/101.png' alt='' width='70%' height='70%' />"
+    },
+    {
+       "title": "Update Space Quota",
+       "desc": "Purpose: Use this command to update an existing space quota.Syntax:<blockquote><p style='text-align: left;'>$ cf update-space-quota SPACE_QUOTA [-i INSTANCE_MEMORY] [-m MEMORY] [-n NAME] [-r ROUTES] [-s SERVICE_INSTANCES] [-a APP_INSTANCES] [--allow-paid-service-plans | --disallow-paid-service-plans] [--reserved-route-ports RESERVED_ROUTE_PORTS]</p></blockquote>Where: <ol> -a stands for total number of application instances. -1 represents an unlimited amount. (Default: unlimited) --allow-paid-service-plans can provision instances of paid service plans (Default: disallowed) -i stands for maximum amount of memory an application instance can have (e.g. 1024M, 1G, 10G). -1 represents an unlimited amount. (Default: unlimited) -m stands for total amount of memory a space can have (e.g. 1024M, 1G, 10G) -r stands for total number of routes -n stands for new name -r stands for total number of routes --reserved-route-ports stands for maximum number of routes that may be created with reserved ports (Default: 0) -s stands for total number of service instances </ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/102.png' alt='' width='70%' height='70%' />"
+    },
+    {
+       "title": "Delete Space Quota",
+       "desc": "Purpose: Use this command to delete a space quota definition and un-assign the space quota from all spaces.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-space-quota SPACE_QUOTA_NAME [-f]</p></blockquote>Where:<ol>-f stands for force deletion of the targeted space quota without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/103.png' alt='' width='726' height='159' />"
+    },
+    {
+       "title": "Set Space Quota",
+       "desc": "Purpose: Use this command to assign a space quota definition to a space.Syntax:<blockquote><p style='text-align: left;'>$ cf set-space-quota SPACE_NAME SPACE_QUOTA_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/104.png' alt='' width='844' height='83' />"
+    },
+    {
+       "title": "Unset Space Quota",
+       "desc": "Purpose: Use this command to un-assign a space quota definition from a space.Syntax:<blockquote><p style='text-align: left;'>$ cf unset-space-quota SPACE_NAME SPACE_QUOTA_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/105.png' alt='' width='897' height='112' />"
+    },
+    {
+       "title": "Service Brokers",
+       "desc": "Purpose: Use this command to view a list of service brokers.Syntax:<blockquote><p style='text-align: left;'>$ cf service-brokers</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/106.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Create Service Broker",
+       "desc": "Purpose: Use this command to create a new service broker.Syntax:<blockquote><p style='text-align: left;'>$ cf create-service-broker SERVICE_BROKER USERNAME PASSWORD URL [--space-scoped]</p></blockquote>Where:<ol>--space-scoped stands for making the broker''s service plans only visible within the targeted space</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/107.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Update Service Broker",
+       "desc": "Purpose: Use this command to update an existing service broker.Syntax:<blockquote><p style='text-align: left;'>$ cf update-service-broker SERVICE_BROKER USERNAME PASSWORD URL</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/108.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Delete Service Broker",
+       "desc": "Purpose: Use this command to delete an existing service broker.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-service-broker SERVICE_BROKER [-f]</p></blockquote>Where: <ol>-f stands for force deletion of the targeted service broker without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/109.png' alt='' width='725' height='120' />"
+    },
+    {
+       "title": "Rename Service Broker",
+       "desc": "Purpose: Use this command to rename an existing service broker.Syntax:<blockquote><p style='text-align: left;'>$ cf rename-service-broker SERVICE_BROKER NEW_SERVICE_BROKER</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/110.png' alt='' width='840' height='80' />"
+    },
+    {
+       "title": "Migrate Service Instances",
+       "desc": "Purpose: Use this command to migrate service instances from one service plan to another.Syntax:<blockquote><p style='text-align: left;'>$ cf migrate-service-instances v1_SERVICE v1_PROVIDER v1_PLAN v2_SERVICE v2_PLAN</p></blockquote>Where:<ol>-f stands for force migration of the targeted service instance without confirmation or warning.</ol>"
+    },
+    {
+       "title": "Purge Service Offering",
+       "desc": "Purpose: Use this command to recursively remove a service and child objects from Cloud Foundry database without making requests to a service broker.Syntax:<blockquote><p style='text-align: left;'>$ cf purge-service-offering SERVICE [-p PROVIDER] [-f]</p></blockquote>Where:<ol> -f stands for force deletion without confirmation -p stands for provider</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/111.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Purge Service Instance",
+       "desc": "Purpose: Use this command to recursively remove a service instance and child objects from Cloud Foundry database without making requests to a service broker.Syntax:<blockquote><p style='text-align: left;'>$ cf purge-service-instance SERVICE_INSTANCE</p></blockquote>Where:<ol>-f stands for force deletion without confirmation</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/112.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Service Access",
+       "desc": "Purpose: Use this command to view a list of service access setting parameters.Syntax:<blockquote><p style='text-align: left;'>$ cf service-access [-b BROKER] [-e SERVICE] [-o ORG]</p></blockquote>Where:<ol>-b stands for access for plans of a particular broker -e stands for accessing service name of a particular service offering -o stands for plans accessible by a particular organization</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/113.png' alt='' width='644' height='342' />"
+    },
+    {
+       "title": "Enable Service Access",
+       "desc": "Purpose: Use this command to enable access to a service or service plan for one or all orgs.Syntax:<blockquote><p style='text-align: left;'>$ cf enable-service-access SERVICE [-p PLAN] [-o ORG]</p></blockquote>Where:<ol>-o enables access for a specified organization-p enables access to a specified service plan</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/114.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Disable Service Access",
+       "desc": "Purpose: Use this command to disable access to a service or service plan for one or all orgs.Syntax:<blockquote><p style='text-align: left;'>$ cf disable-service-access SERVICE [-p PLAN] [-o ORG]</p></blockquote>Where:<ol>-o disables access for a specified organization-p disables access to a specified service plan</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/115.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Security Group",
+       "desc": "Purpose: Use this command to view a single security group.Syntax:<blockquote><p style='text-align: left;'>$ cf security-group SECURITY_GROUP</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/116.png' alt='' width='652' height='505' />"
+    },
+    {
+       "title": "Security Groups",
+       "desc": "Purpose: Use this command to view a list of all security groups.Syntax:<blockquote><p style='text-align: left;'>$ cf security-groups</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/117.png' alt='' width='488' height='205' />"
+    },
+    {
+       "title": "Create Security Group",
+       "desc": "Purpose: Use this command to create a new security group.Syntax:<blockquote><p style='text-align: left;'>$ cf create-security-group SECURITY_GROUP_PATH_TO_JSON_RULES_FILE</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/118.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Update Security Group",
+       "desc": "Purpose: Use this command to update an existing security group.Syntax:<blockquote><p style='text-align: left;'>$ cf update-security-group SECURITY_GROUP_PATH_TO_JSON_RULES_FILE</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/119.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Delete Security Group",
+       "desc": "Purpose: Use this command to delete an existing security group.Syntax:<blockquote><p style='text-align: left;'>$ cf delete-security-group SECURITY_GROUP [-f]</p></blockquote>Where:<ol>-f stands for force deletion of the targeted security group without confirmation or warning.</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/120.png' alt='' width='811' height='140' />"
+    },
+    {
+       "title": "Bind Security Group",
+       "desc": "Purpose: Use this command to bind a security group to a particular space, or all existing spaces of an org.Syntax:<blockquote><p style='text-align: left;'>$ cf bind-security-group SECURITY_GROUP ORG [SPACE]</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/121.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Unbind Security Group",
+       "desc": "Purpose: Use this command to unbind a security group from a space.Syntax:<blockquote><p style='text-align: left;'>$ cf unbind-security-group SECURITY_GROUP ORG SPACE</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/122.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Bind Staging Security Group",
+       "desc": "Purpose: Use this command to bind a security group to the list of security groups to be used for staging applications.Syntax:<blockquote><p style='text-align: left;'>$ cf bind-staging-security-group SECURITY_GROUP</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/123.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Staging Security Groups",
+       "desc": "Purpose: Use this command to view a list of security groups in the staging set for applications.Syntax:<blockquote><p style='text-align: left;'>$ cf staging-security-groups</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/124.png' alt='' width='753' height='241' />"
+    },
+    {
+       "title": "Unbind Staging Security Group",
+       "desc": "Purpose: Use this command to unbind a security group from the set of security groups for staging applications.Syntax:<blockquote><p style='text-align: left;'>$ cf unbind-staging-security-group SECURITY_GROUP</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/125.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Bind Running Security Group",
+       "desc": "Purpose: Use this command to bind a security group to the list of security groups to be used for running applications.Syntax:<blockquote><p style='text-align: left;'>$ cf bind-running-security-group SECURITY_GROUP</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/126.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "Running Security Groups",
+       "desc": "Purpose: Use this command to view a list of security groups in the set of security groups for running applications.Syntax:<blockquote><p style='text-align: left;'>$ cf running-security-groups</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/127.png' alt='' width='779' height='248' />"
+    },
+    {
+       "title": "Unbind Running Security Group",
+       "desc": "Purpose: Use this command to unbind a security group from the set of security groups for running applications.Syntax:<blockquote><p style='text-align: left;'>$ cf unbind-running-security-group SECURITY_GROUP</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/128.png' alt='' width='1072' height='183' />"
+    },
+    {
+       "title": "Running Environment Variable Group",
+       "desc": "Purpose: Use this command to retrieve the contents of the running environment variable group.Syntax:<blockquote><p style='text-align: left;'>$ cf running-environment-variable-group</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/129.png' alt='' width='909' height='131' />"
+    },
+    {
+       "title": "Staging Environment Variable Group",
+       "desc": "Purpose: Use this command to retrieve the contents of the staging environment variable group.Syntax:<blockquote><p style='text-align: left;'>$ cf staging-environment-variable-group</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/130.png' alt='' width='930' height='138' />"
+    },
+    {
+       "title": "Set Staging Environment Variable Group",
+       "desc": "Purpose: Use this command to pass parameters as JSON to create a staging environment variable group.Syntax:<blockquote><p style='text-align: left;'>$ cf set-staging-environment-variable-group ''{'name':'value','name':'value'}''</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/131.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Set Running Environment Variable Group",
+       "desc": "Purpose: Use this command to pass parameters as JSON to create a running environment variable group.Syntax:<blockquote><p style='text-align: left;'>$ cf set-running-environment-variable-group ''{'name':'value','name':'value'}'' </p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/132.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Feature Flags",
+       "desc": "Purpose: Use this command to retrieve list of feature flags with status of each flag-able feature.Syntax:<blockquote><p style='text-align: left;'>$ cf feature-flags</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/133.png' alt='' width='685' height='423' />"
+    },
+    {
+       "title": "Feature Flag",
+       "desc": "Purpose: Use this command to retrieve an individual feature flag with status.Syntax:<blockquote><p style='text-align: left;'>$ cf feature-flag FEATURE_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/134.png' alt='' width='939' height='158' />"
+    },
+    {
+       "title": "Enable Feature Flag",
+       "desc": "Purpose: Use this command to enable the use of a feature so that users have access to and can use the feature.Syntax:<blockquote><p style='text-align: left;'>$ cf enable-feature-flag FEATURE_NAME </p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/135.png' alt='' width='1029' height='160' />"
+    },
+    {
+       "title": "Disable Feature Flag",
+       "desc": "Purpose: Use this command to disable the use of a feature so that users have access to and can use the feature.Syntax:<blockquote><p style='text-align: left;'>$ cf disable-feature-flag FEATURE_NAME </p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/136.png' alt='' width='90%' height='90%' />"
+    },
+    {
+       "title": "CURL",
+       "desc": "Purpose: Use this command to execute a raw request to the targeted API endpoint. Syntax:<blockquote><p style='text-align: left;'>$ cf curl PATH [-iv] [-X METHOD] [-H HEADER] [-d DATA] [--output FILE]</p></blockquote>Where:<ol> <li> -H stands for custom headers to include in the request, flag can be specified multiple times </li><li> -X stands for HTTP method (GET,POST,PUT,DELETE,etc) </li><li> -d stands for HTTP data to include in the request body, or ''@'' followed by a file name to read the data from </li><li> -i stands for include response headers in the output </li><li>--output stands for write curl body to FILE instead of stdout</li></ol>"
+    },
+    {
+       "title": "Config",
+       "desc": "Purpose: Use this command to write default values to the configuration. Syntax:<blockquote><p style='text-align: left;'>$ cf config [--async-timeout TIMEOUT_IN_MINUTES] [--trace (true | false | path/to/file)] [--color (true | false)] [--locale (LOCALE | CLEAR)]</p></blockquote>Where: <ol>--async-timeout stands for timeout for async HTTP requests<br /> --color stands for enabling or disabling color<br /> --locale stands to set default locale. If LOCALE is ''CLEAR'', previous locale is deleted.<br /> --trace traces HTTP requests</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/138.png' alt='' width='892' height='53' />"
+    },
+    {
+       "title": "Oauth Token",
+       "desc": "Purpose: Use this command to retrieve and display the OAuth token for the current session.Syntax:<blockquote><p style='text-align: left;'>$ cf oauth-token</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/139.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "SSH Code",
+       "desc": "Purpose: Use this command to receive a one-time password for SSH clients.Syntax:<blockquote><p style='text-align: left;'>$ cf ssh-code</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/140.png' alt='' width='581' height='77' />"
+    },
+    {
+       "title": "Add Plugin Repo",
+       "desc": "Purpose: Use this command to add a new plugin repository.Syntax:<blockquote><p style='text-align: left;'>$ cf add-plugin-repo REPO_NAME URL</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/141.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Remove Plugin Repo",
+       "desc": "Purpose: Use this command to remove a plugin repository.Syntax:<blockquote><p style='text-align: left;'>$ cf remove-plugin-repo REPO_NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/142.png' alt='' width='823' height='129' />"
+    },
+    {
+       "title": "List Plugin Repos",
+       "desc": "Purpose: Use this command to view a list of all the added plugin repositories.Syntax:<blockquote><p style='text-align: left;'>$ cf list-plugin-repos</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/143.png' alt='' width='740' height='170' />"
+    },
+    {
+       "title": "Repo Plugins",
+       "desc": "Purpose: Use this command to view a list of all the available plugins in all added repositories.Syntax:<blockquote><p style='text-align: left;'>$ cf repo-plugins [-r REPO_NAME]</p></blockquote>Where: <ol>-r stands for name of a registered repository</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/144.png' alt='' width='80%' height='80%' />&nbsp;<img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/145.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Plugins",
+       "desc": "Purpose: Use this command to view a list of all the installed plugin commands.Syntax:<blockquote><p style='text-align: left;'>$ cf plugins [--checksum | --outdated]</p></blockquote>Where: <ol>--checksum stands for computing and showing the sha1 value of the plugin binary file<br /> --outdated stands for searching the plugin repositories for new versions of installed plugins</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/145.png' alt='' width='1060' height='175' />"
+    },
+    {
+       "title": "Install Plugin",
+       "desc": "Purpose: Use this command to install the plugin defined in command argument.Syntax:<blockquote><p style='text-align: left;'>$ cf install-plugin PLUGIN_NAME [-r REPO_NAME] [-f]</p></blockquote><blockquote><p style='text-align: left;'>$ cf install-plugin LOCAL-PATH/TO/PLUGIN | URL [-f]</p></blockquote>Where: <ol>-f stands for force install of plugin without confirmation<br /> -r stands for restricting search for plugin to this registered repository</ol>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/147.png' alt='' width='80%' height='80%' />"
+    },
+    {
+       "title": "Uninstall Plugin",
+       "desc": "Purpose: Use this command to uninstall the plugin defined in command argument.Syntax:<blockquote><p style='text-align: left;'>$ cf uninstall-plugin PLUGIN-NAME</p></blockquote>Example:<br /><img class='alignnone size-full wp-image-304' src='https://s3.amazonaws.com/acf-console/user-guide/148.png' alt='' width='781' height='102' />"
+    },
+    {
+       "title": "How can I run my applications on Cloud Foundry?",
+       "desc": "<ul>     <li>Download and install -https://github.com/cloudfoundry/cli/releases the CLI tool suitable          for your Operating System.</li>     <li>Target and login to your CF API endpoint via the CLI.</li>     <li>Once logged in, create and target an Organization, then create a Space and target the same          using CLI.</li>     <li>Push your cloud-ready application using the CLI commands.</li>     <li>If you wish to use any of CF service, bind it with your application and restage it.</li></ul>"
+    },
+    {
+       "title": "What are the services offered for a shared ACF platform user?",
+       "desc": "After targeting and logging into Atos Cloud Foundry, run the cf marketplace cf CLI command to view the services available to your targeted organization.Available services may differ between organizations and between Atos Cloud Foundry marketplaces.&nbsp;<em>Usage</em>:  <b>cf marketplace</b> [-s SERVICE]<strong>Alias</strong> m<div></div><div><strong>Options</strong></div><div>-s</div><dl><dd>Show plan details for a particular service offering.</dd><dd></dd><dt><span class='option-name'>--no-plans</span></dt><dd>Hide plan information for service offerings</dd></dl>"
+    },
+    {
+       "title": "What are the roles and their responsibilities on the ACF platform?",
+       "desc": "The following describes each type of user role in Atos Cloud Foundry: <br /><strong>Org Managers</strong>: Administer the org.<br /><strong>Org Auditors</strong>: Read-only access to user information and org quota usage information.<br /><strong>Org Users</strong>: Read-only access to the list of other org users and their roles. When an Org Manager gives a person an Org or Space role, that person automatically receives Org User status in that org. <br /><strong>Space Managers:</strong> Administer a space within an org.<br /><strong>Space Developers</strong>: Manage applications and services in a space.<br /><strong>Space Auditors:</strong> Read-only access to a space."
+    },
+    {
+       "title": "What are the tools that are used for Platform Operations control?",
+       "desc": "<strong>Pingdom</strong>: Monitor and tests the availability of our website, applications and servers.Automated the pingdom interactions with our REST API.Get to the root of any server or application outage to resolve the issue and prevent any recurrence.<br /><strong>Nagios</strong>: Offers monitoring and alerting services for servers, switches, applications and services. It alerts when things go wrong and alerts within a second time when the problem has been resolved.<br /><strong>Prometheus</strong>:Provide powerful metrics collection and alerting system. Grafana is one of the best visualization tools which can be used with Prometheus. We can create a dashboard with multiple charts together in Grafana. Grafana has out-of-the-box integration with Prometheus<br /><strong>Statuspage</strong>:- Its a Communication tool that helps us to inform our users about outages and scheduled maintenance.Users can subscribe to updates via email or text messages when we have an incident. <a href='https://eu01-cf.statuspage.io' target='_blank'>https://eu01-cf.statuspage.io</a> <br /><strong>ELK</strong> is the acronym for three open source projects: Elasticsearch, Logstash, and Kibana. Elasticsearch is a search and analytics engine. Logstash is a server side data processing pipeline that ingests data from multiple sources simultaneously, transforms it, and then sends it to a 'stash' like Elasticsearch. Kibana lets users visualize data with charts and graphs in Elasticsearch."
+    },
+    {
+       "title": "How to get started with ELK for application logging?",
+       "desc": "Kibana is an analytics and visualization platform that builds on Elastic-search to give you a better understanding of your data<br /><strong>Kibana Visualization</strong>The Kibana Visualize page is where you can create, modify, and view your own custom visualizations. There are several different types of visualizations, ranging from <em>Vertical bar</em> and <em>Pie</em>charts to <em>Tile maps</em> (for displaying data on a map) and <em>Data tables</em>.We have created few visualization for you , by which you can check specific logs and narrow down the search result. In the picture depicted below you can see what all  visualization are available for you.<br /><strong>Kibana Dashboard</strong>The Kibana Dashboard page is where you can create, modify, and view your own custom dashboards. With a dashboard, you can combine multiple visualizations onto a single page, then filter them by providing a search query or by selecting filters by clicking elements in the visualization. Dashboards are useful for when you want to get an overview of your logs, and make correlations among various visualizations and logs.Dashboards can be filtered further by entering a search query, changing the time filter, or clicking on the elements within the visualization.For example, if you click on a particular color segment in the histogram, Kibana will allow you to filter on the significant term that the segment represents.<br /><strong>Kibana Settings</strong>The Kibana Settings page lets you change a variety of things like default values or index patterns"
+    }
+ ]

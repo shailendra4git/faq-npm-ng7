@@ -1,0 +1,9 @@
+---
+applications:
+- name: "faq"
+  memory: 256M
+  disk_quota: 256M
+  path: "./dist/faq"
+  host: "faq"
+  buildpack: "staticfile_buildpack"
+  command: "$HOME/boot.sh"

@@ -1,0 +1,35 @@
+<header clearfix>
+  <h1><img src="../../assets/images/acf.png" alt="Atos Cloud Foundry" title="Atos Cloud Foundry" /></h1>
+  <h2>
+     <i class="fa fa-question-circle"></i>
+     <a href="/faq" title="Navigate to FAQ">
+     FAQ</a>
+  </h2>
+</header>
+<section>
+  <h3>User Guide</h3>
+  <div class="content-box">
+     <div class="row">
+        <div class="col-md-6">
+           <input [(ngModel)]="searchText" placeholder="search...">
+        </div>
+        <div class="col-md-6 open-close">
+           <button class="btn btn-primary btn-sm" (click)="accordion.openAll()"><i class="fa fa-plus-circle"></i> Expand All </button>
+           <button class="btn btn-primary btn-sm" (click)="accordion.closeAll()"><i class="fa fa-minus-circle"></i> Collapse All </button>
+        </div>
+     </div>
+     <mat-accordion #accordion="matAccordion" [multi]="true">
+     <mat-expansion-panel *ngFor="let userGuide of userGuideItems | filter : searchText">
+        <mat-expansion-panel-header>
+           <mat-panel-title>
+              {{userGuide.title}}
+           </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div [innerHTML]="userGuide.desc"></div>
+     </mat-expansion-panel>
+     </mat-accordion>
+  </div>
+</section>
+<footer>
+  &copy; Atos Cloud Foundry {{year}}
+</footer>

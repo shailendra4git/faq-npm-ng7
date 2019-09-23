@@ -1,0 +1,85 @@
+*:focus {
+    outline: none;
+}
+
+body{
+    font: normal 14px/150% Verdana, Helvetica, sans-serif;
+    color: #58575c;
+}
+header {
+    height: 65px;
+}
+
+header h1{
+    float: left;
+    width: 20%;
+    padding-left: 50px;
+}
+
+header h2{    
+    background: #0178bc;
+    float: left;
+    width: 80%;
+    height: 65px;
+    padding: 20px 50px;
+    text-align: right;
+    color: #fff;
+    font-size: 16px;
+}
+header h2 a, header h2 a:hover{    
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    background: #f2f7f8;
+    padding: 30px 50px;;
+}
+
+section h3{
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+section .content-box{
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(0,0,0,.125);
+    box-shadow: 0 4px 6px rgba(0,0,0,.125);
+    background: #fff;
+}
+
+section input{
+    font-size: 14px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    height: 39px;
+    line-height: 1;
+    padding: 8px 20px;
+    width: 300px;
+}
+
+section .open-close{
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+section .open-close button{
+    margin-left: 20px;
+}
+
+footer{
+    font-size: 11px;
+    text-align: center;
+    padding: 20px 0; 
+}
+
+.mat-expansion-panel-header, .mat-expansion-panel-header-title{
+    font: normal 15px/150% Verdana, Helvetica, sans-serif;
+}
+
+.mat-expansion-panel-content{
+    font: normal 14px/150% Verdana, Helvetica, sans-serif;
+    color: #58575c;
+}
